@@ -1,3 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Lato:wght@100;300;400&display=swap');
+
+body {
+  background-color: #d4e0ee;
+  font-family: 'Hanken Grotesk', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__container {
+  width: 375px;
+  height: 809px;
+  background-color: #fff;
+}
+
+.card__result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 356px;
+  background: linear-gradient(#7755ff, #2f2ce9);
+  border-radius: 0 0 32px 32px;
+  color: #cac0ff;
+  text-align: center;
+}
+
+.card__result--title {
+  display: flex;
+  padding-bottom: 25px;
+}
+
+.card__result__message--title {
+  font-size: 24px;
+  color: #fff;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.card__result__message {
+  padding: 0 40px;
+}
+
+.card__display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(#2521c9 50%, #4d21c9);
+  border-radius: 50%;
+}
+
+.card__display--main-text {
+  font-size: 56px;
+  color: #fff;
+}
+
+.card__display--secondary-text {
+  font-weight: bold;
+}
+
 .attribution { 
   font-size: 11px; 
   text-align: center; 
