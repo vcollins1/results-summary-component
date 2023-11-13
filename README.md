@@ -14,7 +14,11 @@ This is a solution to the [Results summary component challenge on Frontend Mento
 
 ### Screenshot
 
+#### Mobile View
 ![Results-Summary Mobile Solution Screenshoot](./assets/images/mobile-view-screenshot.png)
+
+#### Desktop View
+![Results-Summary Desktop Solution Screenshoot](./assets/images/desktop-view-screenshot.png)
 
 ## My process
 

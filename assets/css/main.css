@@ -125,7 +125,7 @@ body {
 }
 
 .card__btn {
-  width: 315px;
+  width: 323px;
   height: 56px;
   background: #303b59;
   color: #fff;
@@ -133,7 +133,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 24px 26px;
+  margin: 24px 0;
 }
 
 .attribution { 
@@ -143,4 +143,35 @@ body {
 
 .attribution a {
  color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 750px) {
+  .card__container {
+    display: flex;
+    width: 736px;
+    height: 512px;
+    border-radius: 36px;
+  }
+
+  .card__result {
+    height: 100%;
+    border-radius: 32px;
+  }
+
+  .card__summary {
+    margin: auto 0;
+  }
+
+  .card__summary > span {
+    font-size: 26px;
+  }
+
+  .card__btn {
+    cursor: pointer;
+    margin-top: 41px;
+  }
+
+  .card__btn:hover {
+    background: linear-gradient(#7755ff, #2f2ce9);
+  }
 }
