@@ -1,26 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Lato:wght@100;300;400&display=swap');
 
-body {
-  background-color: #d4e0ee;
-  font-family: 'Hanken Grotesk', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CARD CONTAINER */
+
+.container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: #d4e0ee;
+  font-family: 'Hanken Grotesk', sans-serif;
 }
 
-.card__container {
+.card {
   width: 375px;
   height: 809px;
-  background-color: #fff;
+  background: #fff;
 }
 
-.card__result {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/* HERO SECTION */
+
+.hero {
   height: 356px;
   background: linear-gradient(#7755ff, #2f2ce9);
   border-radius: 0 0 32px 32px;
@@ -29,45 +34,70 @@ body {
   margin-bottom: 24px;
 }
 
-.card__result--title {
+.card__title {
+  font-size: 18px;
+  padding: 24px 0;
+}
+
+.display {
   display: flex;
-  padding-bottom: 25px;
-}
-
-.card__result__message--title {
-  font-size: 24px;
-  color: #fff;
-  padding-top: 15px;
-  padding-bottom: 10px;
-}
-
-.card__result__message {
-  padding: 0 40px;
-}
-
-.card__display {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  margin-bottom: 24px;
+}
+
+.display::before {
+  content: "";
   width: 140px;
   height: 140px;
   background: linear-gradient(#2521c9 50%, #4d21c9);
   border-radius: 50%;
+  position: absolute;
 }
 
-.card__display--main-text {
+.display__item {
+  flex-basis: 140px;
+}
+
+.display__content {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  width: 140px;
+  height: 140px;
+  z-index: 10;
+}
+
+.display__main-text {
   font-size: 56px;
   color: #fff;
 }
 
-.card__display--secondary-text {
-  font-weight: bold;
+.display__secondary-text {
+  font-size: 16px;
 }
 
-.card__summary {
+.message__title {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.message__text {
+  font-size: 16px;
+  margin: 0 58px;
+}
+
+/* SUMMARY SECTION */
+
+.summary {
   padding: 0 26px;
   color: #303b59;
+}
+
+.summary > span {
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .card__grid {
@@ -136,49 +166,66 @@ body {
   margin: 24px 0;
 }
 
-.attribution { 
-  font-size: 11px; 
-  text-align: center; 
-}
-
-.attribution a {
- color: hsl(228, 45%, 44%); 
-}
-
 @media screen and (min-width: 750px) {
-  .card__container {
+  .card {
     display: flex;
     width: 736px;
     height: 512px;
     border-radius: 36px;
   }
 
-  .card__result {
+  .hero {
     height: 100%;
     border-radius: 32px;
   }
 
-  .card__result--title {
+  .card__title {
     font-size: 24px;
+    padding-top: 38px;
+    padding-bottom: 35px;
   }
 
   .card__result__message--title {
     font-size: 32px;
   }
 
-  .card__display {
-    width: 200px;
-    height: 200px;
-    margin-top: 35px;
+  .display {
     margin-bottom: 28px;
   }
 
-  .card__summary {
+  .display::before {
+    width: 200px;
+    height: 200px;
+  }
+
+  .display__content {
+    width: 200px;
+    height: 200px;
+  }
+
+  .display__main-text {
+    font-size: 72px;
+  }
+  
+  .display__secondary-text {
+    font-size: 18px;
+  }
+
+  .message__title {
+    font-size: 32px;
+    margin-bottom: 14px;
+  }
+  
+  .message__text {
+    font-size: 18px;
+  }
+
+  .summary {
     margin: auto 0;
   }
 
-  .card__summary > span {
-    font-size: 26px;
+  .summary > span {
+    font-size: 24px;
   }
 
   .card__btn {
